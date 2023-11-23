@@ -1,5 +1,6 @@
 import numpy as np
 
+
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 
