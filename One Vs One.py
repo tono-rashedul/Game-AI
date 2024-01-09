@@ -4,10 +4,10 @@ import sys
 import math
 
 #RGB value
-BLUE = (0,0, 255)  
+BLUE = (0,131, 184)  
 BLACK = (0,0,0)
-RED = (255, 0, 0)
-YELLOW= (255, 255, 0)
+RED = (255, 22, 44)
+YELLOW= (254, 211, 0)
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
@@ -88,7 +88,7 @@ draw_board(board)
 pygame.display.update()
 
 
-myfont = pygame.font.SysFont("monospace", 75)    #Font 
+myfont = pygame.font.SysFont("serif", 63)    #Font 
 
 while not game_over:
 
@@ -120,7 +120,7 @@ while not game_over:
                     drop_piece(board, row, col, 1)
                     
                     if winning_move(board, 1):
-                        label = myfont.render("Player 1 Wins!", 1, RED)
+                        label = myfont.render("Player 1 Wins! Congrats :)", 1, RED)
                         screen.blit(label,(40,10)) #update that specific part of screen
                         game_over = True
 
@@ -134,7 +134,7 @@ while not game_over:
                     drop_piece(board, row, col, 2)
                 
                     if winning_move(board, 2):
-                        label = myfont.render("Player 2 Wins!", 1, YELLOW)
+                        label = myfont.render("Player 2 Wins!Congrats :)", 1, YELLOW)
                         screen.blit(label,(40,10)) #update that specific part of screen
                         game_over = True
 
